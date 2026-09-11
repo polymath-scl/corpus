@@ -1,0 +1,29 @@
+name = "Lvzhou Chen"
+affiliation = "Purdue University"
+role = "admin"
+admitted_by = "danny"
+
+# How this public key was confirmed over a channel other than the one that
+# delivered it, and when. This is the one rule in the whole system that no
+# program can check: the validator can only insist that you claim to have done
+# it, and refuse the file while the claim is still a placeholder.
+key_confirmed_out_of_band = "SHA256 fingerprint read aloud over phone, 2026-09-11"
+
+# Fingerprint of the key below, for the record:
+#   SHA256:SNE3qKzUYM6Bo1Vdq19jyyYhy8r3F1N7K8p3YdMhDI0
+# The trailing comment on a key is only a label and is not part of the key: the
+# fingerprint is identical with or without it. It was changed from a personal
+# email address, because this file is published permanently and mirrored by
+# everyone who clones the corpus.
+keys = [
+  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDFoqSGje5liewRq4kA9Zbk4C28dXQHdNLd4HHeF5cTJ lvzhou",
+]
+
+# When a key is rotated, or if one is ever compromised, add a block like this and
+# leave the old key listed above. Signatures made with a revoked key stop being
+# accepted; the records themselves stay in the history.
+#
+# [[revocation]]
+# key = "ssh-ed25519 ..."
+# reason = "rotation"       # "rotation", "compromise", or "departure"
+# effective = "2027-01-01"

@@ -951,6 +951,32 @@ def t_stray_toplevel():
     f.clean()
 
 
+def t_the_one_unautomatable_rule_cannot_be_satisfied_by_a_placeholder():
+    """Confirming a key out of band is the only rule no program can check: the
+    validator can only insist you claim to have done it. Noticed while preparing
+    a real member file -- if 'TODO' satisfies the claim, it is not even a speed
+    bump, and a half-finished member file would sail through."""
+    f = fresh()
+    pub = (f.tmp / "id_bob.pub").read_text().strip()
+
+    def member_file(confirmed):
+        (f.root / "people" / "bob.toml").write_text(
+            f'name = "Bob"\nrole = "member"\nadmitted_by = "alice"\n'
+            f'key_confirmed_out_of_band = "{confirmed}"\nkeys = ["{pub}"]\n',
+            encoding="utf-8")
+        f._people = None
+        return codes(f.validate())
+
+    for placeholder in ("TODO: fill this in", "TBD", "FIXME later",
+                        "read aloud over ____, 2026-09-__", "confirmed ???"):
+        check(f"a placeholder is rejected: {placeholder!r}",
+              "P11" in member_file(placeholder), member_file(placeholder))
+    check("an empty confirmation is still rejected", "P10" in member_file(""))
+    check("a real confirmation passes",
+          member_file("SHA256 fingerprint read aloud over video call, 2026-09-11") == [])
+    f.clean()
+
+
 def t_unconfirmed_key():
     f = fresh()
     pub = (f.tmp / "id_bob.pub").read_text().strip()

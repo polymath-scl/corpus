@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "type": "theorem",
+  "title": "Unbounded winding is the only difficulty in the cut-and-glue approach",
+  "body": "## The statement\n\nIn the cut-and-glue approach, the unboundedness of the winding around gamma is the *only*\ndifficulty.\n\n## The proof, or where to find it\n\nIt suffices to keep track of the vector of incoming and outgoing arc pairs together with\nthe degree along gamma. Enough of the data to reconstruct the Euler characteristic and\nthe degree of the surface is determined by that finite amount of data.\n\nThis is worth stating positively and separately from the obstruction it refers to: it says\nthe problem is finite-dimensional apart from one unbounded parameter, and so identifies\nprecisely what would have to be controlled for the approach to go through.\n\n**Status: this is a theorem, modulo the train-track scl technology of the cited paper of\nCalegari and Walker. The derivation has not been written out.** It is not folklore in the\nsense of being unproved; it is a routine consequence for somebody who knows that machinery.\nBut nobody has written it down, and until somebody does, this record will display as\n\"proof not written out\" rather than as proved in the literature -- which is accurate.\n\n**This is an invitation.** Writing out the derivation is a well-defined, self-contained\ntask, and whoever does it should publish an `argument` record supporting this one, or\nsupersede this record with one linked to the write-up by `proved_in`. It is a good first\ncontribution: the result is known to be true, so the risk is low, and the payoff is that\neverything downstream of the cut-and-glue approach stops resting on an assertion.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "cites",
+      "target": "2ff83d7b5c26-unbounded-winding-around-gamma-obstructs-the-cu"
+    },
+    {
+      "rel": "cites",
+      "target": "0570c4ce4164-calegari-and-walker-surface-subgroups-from-line"
+    }
+  ],
+  "asserted_confidence": "confident",
+  "status": "open",
+  "id": "056eba047a3f-unbounded-winding-is-the-only-difficulty-in-the",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQOQDryg8ZmRzDUpqn4EFpeVsvepIl6Tq5aP72av1ntSRgQzdan\nmJEGw35qAapeHxlmaw2df5Wyf7vMe3TP2Z/wk=\n-----END SSH SIGNATURE-----\n"
+}

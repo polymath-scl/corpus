@@ -1,0 +1,27 @@
+# Copy to people/<your-handle>.toml. Your handle is lowercase letters, digits,
+# hyphens and underscores, starting with a letter.
+#
+# An administrator must confirm your public key OUT OF BAND -- in person, over
+# video, or against your institutional web page -- and record how, below. This
+# is the one step that cannot be automated: it is what stops somebody adding a
+# key that is not yours.
+
+name = "Your Name"
+affiliation = "Your University"
+role = "member"                  # "member" or "admin"
+admitted_by = "handle-of-admin"
+key_confirmed_out_of_band = "in person at the Chicago topology seminar, 2026-09-15"
+
+# The contents of ~/.ssh/id_ed25519.pub, one entry per key.
+keys = [
+  "ssh-ed25519 AAAAC3Nza... your-key-here",
+]
+
+# When you rotate a key, or if one is ever compromised, add a block like this
+# and keep the old key listed above. Signatures made with a revoked key stop
+# being accepted; the records themselves stay in the history.
+#
+# [[revocation]]
+# key = "ssh-ed25519 AAAAC3Nza... old-key"
+# reason = "rotation"            # "rotation", "compromise", or "departure"
+# effective = "2027-01-01"

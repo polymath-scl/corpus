@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "type": "reference",
+  "title": "Calegari and Louwsma, Immersed surfaces in the modular orbifold",
+  "body": "## The reference\n\nDanny Calegari and Joel Louwsma, *Immersed surfaces in the modular orbifold*.\n\nThe journal, volume and year are not recorded here: the source in the author's\ndirectory is a working draft, and the publication details were not in it. Whoever\nhas the published version should supersede this record with them.\n\n## Why it is relevant\n\nIt contains the Stability Theorem, which is the proved case of the eventual\nlinearity of scl under stabilisation along a boundary curve, and the one concrete\npiece of evidence that the unbounded winding obstructing the cut-and-glue approach\nto rationality in surface groups may be tame rather than fatal.\n\nIt also proves a generalisation to hyperbolic (2,p,infinity)-orbifolds for every\np at least 3, and, via the central extension of PSL(2,Z) by the three-strand braid\ngroup B_3, an analogous stability statement in B_3.\n\nThe conjecture that the theorem settles in this case originates in Calegari,\n*Faces of the scl norm ball*, as Conjecture 3.16, where it was observed\nexperimentally that for many words w in the commutator subgroup of F_2, the\ngeodesics corresponding to [a,b]^n w on a hyperbolic once-punctured torus all\nvirtually bound immersed surfaces for sufficiently large n.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [],
+  "id": "6fc76abc2199-calegari-and-louwsma-immersed-surfaces-in-the-m",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQJrdUDkKYMY8/imoIx3WwllGmP7k/ZouN3ZswniCs4Y0dZRJcp\nWaT71ke/oPcidrH8Dh0rMu9X6807NmplQLVw8=\n-----END SSH SIGNATURE-----\n"
+}

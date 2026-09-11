@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "type": "conjecture",
+  "title": "scl is eventually linear under stabilisation along a boundary curve",
+  "body": "## The conjecture\n\nLet S be a surface with one boundary component gamma, and let alpha be an element\nof the commutator subgroup. Then scl(alpha gamma^n) is eventually linear in n as n\ntends to infinity.\n\n## What supports it\n\nThe case where S is the modular orbifold is a theorem of Calegari and Louwsma,\nrecorded separately, and is generalised there to hyperbolic\n(2,p,infinity)-orbifolds. The conjecture in the free group case originates as\nConjecture 3.16 of Calegari, *Faces of the scl norm ball*, supported by computer\nexperiment on the once-punctured torus.\n\n## Why it bears on the winding obstruction\n\nThis is the reason for recording it here, and it is a hope rather than an\nargument.\n\nThe obstruction to the cut-and-glue approach to rationality in closed surface\ngroups is that a boundary component of a candidate surface may wind around the\ncutting curve an uncontrolled number of times, so that the search is not evidently\nover a finite set. The winding number is precisely a stabilisation parameter of\nthe kind above.\n\nEventual linearity in that parameter would say that the unboundedness is tame:\nbeyond some finite point the behaviour is governed by a linear function, so one\nwould not have to search unboundedly, only far enough to reach the linear regime\nand then compute the slope. That is the sense in which this could circumvent, or\nat least tame, the non-finiteness.\n\nWhat is missing to make this work is quantitative: eventual linearity alone does\nnot say where the linear regime starts, and a rationality argument would need that\nthreshold to be effective and uniform over the relevant chains or over a single\nloop which has many large gamma^{n_i} subwords.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "cites",
+      "target": "f6ad44756188-stability-theorem-for-the-modular-orbifold"
+    },
+    {
+      "rel": "cites",
+      "target": "2ff83d7b5c26-unbounded-winding-around-gamma-obstructs-the-cu"
+    }
+  ],
+  "status": "open",
+  "asserted_confidence": "confident",
+  "id": "7504988f51e2-scl-is-eventually-linear-under-stabilisation-al",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQIaNLbZWnEX9pQSvzrG82ualSPMYUfjRHBt717c/YcxY1jgrWq\nSl5NOVM+4F7l3Xqupw427PRZMALZnyt3dkTwk=\n-----END SSH SIGNATURE-----\n"
+}

@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "type": "question",
+  "title": "Is there an infinite strictly descending sequence of scl values in a free group?",
+  "body": "## The question\n\nIs there a single explicit example of an infinite strictly decreasing sequence of\nvalues of scl in a free group?\n\nThe question is not vacuous: scl is bounded below by 1/2 on the commutator subgroup\nof a free group, so any such sequence converges, and its limit is an accumulation\npoint of the spectrum from above. Exhibiting one would therefore also exhibit an\naccumulation point, and conversely an accumulation point approached from above\ngives such a sequence.\n\nWhat is wanted is an explicit family, not an existence argument.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "cites",
+      "target": "8dbd3a8f0977-what-is-the-first-accumulation-point-of-the-scl"
+    }
+  ],
+  "status": "open",
+  "id": "9c34f1eb87d8-is-there-an-infinite-strictly-descending-sequen",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQAqelahrFnjZf2PNldTnSEpMx7HxxJQzM7Ch3nd3aCV50DCHQO\nHjljrTVVGeXLnKPnZYfZPVJHOiTZp8fSVwnw4=\n-----END SSH SIGNATURE-----\n"
+}

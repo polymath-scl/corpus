@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "type": "note",
+  "title": "The standard approach: cut along a curve and glue surfaces with corners",
+  "body": "## Note\n\nThe standard approach to proving that scl is rational for an arbitrary chain C in the\nfundamental group of a closed hyperbolic surface S. Choose a simple essential curve gamma\non S and cut along it. This decomposes the chain C into a collection of arcs\nin the cut-open surface, whose fundamental group is free.\n\nOne then looks for surfaces with corners in the cut-open surface which glue together\nalong gamma to give an admissible surface for C.\n\nThis is the natural generalisation of the argument that settles the case where C can be\nmade disjoint from some simple essential curve. In that case the cut-open surface already\ncontains the whole of C, its fundamental group is free, and no gluing is needed at all.\nThe reason the general case is hard is recorded separately.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "cites",
+      "target": "57e37bd7d928-is-scl-rational-for-chains-in-closed-hyperbolic"
+    }
+  ],
+  "id": "b669fa8e04aa-the-standard-approach-cut-along-a-curve-and-glu",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQOcPi6q3jKlSR5hrDJdA0blscV5GrAzJ1fYiajrBm7IneQZkSU\nrt3gjvn7bel33mdPel0NpP8SKpFxNyixuQHwg=\n-----END SSH SIGNATURE-----\n"
+}

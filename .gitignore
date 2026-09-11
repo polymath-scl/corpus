@@ -1,0 +1,7 @@
+.polymath.json
+.polymath-state.json
+.polymath-browse.html
+draft-*.md
+draft-*.json
+__pycache__/
+*.pyc

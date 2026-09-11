@@ -1,0 +1,58 @@
+# Checks run on every proposed change.
+#
+# IMPORTANT AND NOT OBVIOUS: on the `pull_request` trigger, GitHub runs the
+# workflow file as it appears in the proposal. So a proposal can edit this file
+# and make its own checks pass. We reduce that two ways:
+#
+#   1. The validator itself is taken from the ALREADY-ACCEPTED branch, not from
+#      the proposal. A proposal can therefore change what is checked only by
+#      editing this file, which is administrator-owned (see .github/CODEOWNERS)
+#      and cannot be merged without two administrators.
+#   2. validate-main.yml re-runs everything after merging. That run cannot be
+#      influenced by any proposal and is the authoritative one.
+#
+# Treat a green check here as useful, not as proof. See polymath_design_v3.md, s3.
+name: validate
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the proposal's content
+        uses: actions/checkout@v4
+        with:
+          path: proposal
+          fetch-depth: 0
+
+      - name: Check out the validator from the accepted branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: trusted
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Refuse a proposal that edits the checks themselves
+        run: |
+          cd proposal
+          if git diff --name-only origin/${{ github.base_ref }}...HEAD \
+               | grep -E '^(\.github/|polymath$|people/)' ; then
+            echo "::warning::This proposal changes the checks, the client, or the member"
+            echo "::warning::list. Two administrators must review it, and no result from"
+            echo "::warning::this run should be trusted."
+          fi
+
+      - name: Validate the proposal using the accepted validator
+        run: python3 trusted/polymath --root proposal validate
+
+      - name: Run the validator's own tests
+        run: python3 trusted/tests/test_polymath.py

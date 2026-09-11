@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "type": "question",
+  "title": "What is the first accumulation point of the scl spectrum in a free group?",
+  "body": "## The question\n\nLet F be free and let scl(F) denote the set of values scl(g) for g a nontrivial\nelement (or more generally a chain) in F. The set is contained in the rationals,\nand by the Duncan-Howie theorem it is bounded below by 1/2 on the commutator\nsubgroup.\n\nWhat is the smallest accumulation point of scl(F)?\n\nEquivalently: below which value is the spectrum discrete? The answer would say\nwhere the combinatorially rigid bottom of the spectrum stops and the continuum-like\nbehaviour begins.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "cites",
+      "target": "b3b2d72e6dba-which-rationals-occur-as-scl-of-a-chain-in-a-fr"
+    }
+  ],
+  "status": "open",
+  "id": "8dbd3a8f0977-what-is-the-first-accumulation-point-of-the-scl",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQLHqQ7rO/tJvdp3k6INQaOtZKkZRtjeJ9aIX5OGf51EDNPyMMZ\ntjezdlh0r1Fv8wZeer/AcP7nEcfES2gv20Rwo=\n-----END SSH SIGNATURE-----\n"
+}

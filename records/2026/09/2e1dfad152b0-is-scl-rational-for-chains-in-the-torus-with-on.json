@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "type": "question",
+  "title": "Is scl rational for chains in the torus with one cone point of order 2?",
+  "body": "## The question\n\nLet O be the two-dimensional orbifold obtained from a torus by introducing a single cone\npoint of order 2, and let C be a chain in the orbifold fundamental group of O: a formal\nsum of cyclically reduced conjugacy classes whose total homology class is trivial.\n\nIs scl(C) always rational?\n\nThe orbifold is hyperbolic: its orbifold Euler characteristic is 0 - (1 - 1/2) = -1/2,\nwhich is negative.\n\nAn important test case rather than a subgoal, on the same footing as the closed genus 2\nsurface: no theorem is known that would make a solution here imply the general statement.\n\nNote that this is a variant of the corresponding question for closed hyperbolic surfaces\nrather than a special case of it. The underlying object is an orbifold and not a closed\nsurface, and neither question implies the other.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "variant_of",
+      "target": "57e37bd7d928-is-scl-rational-for-chains-in-closed-hyperbolic"
+    }
+  ],
+  "status": "open",
+  "id": "2e1dfad152b0-is-scl-rational-for-chains-in-the-torus-with-on",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQGSso1LuBicSBe/EFxZ7hbvgX15UUEJx2HQ1K9ezKs97wea/66\n3DOdCKrZaPO5NhAz3UGiwq0nzWKPMrFm+QzgM=\n-----END SSH SIGNATURE-----\n"
+}

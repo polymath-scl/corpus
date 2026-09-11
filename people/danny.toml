@@ -1,0 +1,8 @@
+name = "Danny Calegari"
+affiliation = "University of Chicago"
+role = "admin"
+admitted_by = "danny"
+key_confirmed_out_of_band = "founding administrator; public key read from this machine's ~/.ssh/id_ed25519.pub on 2026-09-10"
+keys = [
+  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEEmCxnN9eTC+J7StOUZdhlCsltEjsEaDBuVvrzoHnnz dannyc@uchicago.edu",
+]

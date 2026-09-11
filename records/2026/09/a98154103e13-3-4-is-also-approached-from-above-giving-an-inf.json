@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "type": "conjecture",
+  "title": "3/4 is also approached from above, giving an infinite descending sequence",
+  "body": "## The conjecture\n\nThe value 3/4 is an accumulation point of the scl spectrum of a free group from\nabove as well as from below, via\n\n    scl = 3/4 + 1/(4m) = (3m+1)/(4m),\n\nattained for essentially every m. Witnesses were found for m = 4 to 13, 15, 17 to\n21, 23, 24, 25 and 27.\n\nTwo consequences. First, 3/4 is the first accumulation point from either side, and\nthe two families are symmetric about it:\n\n    from below:  3/4 - 1/(2n) = (3n-2)/(4n)\n    from above:  3/4 + 1/(4m) = (3m+1)/(4m)\n\nSecond, this answers the question of whether an explicit infinite strictly\ndescending sequence of scl values exists: the values above, taken in increasing m,\nform one.\n\n## What supports it\n\nNo value below 3/4 can be a limit from above, since that would require infinitely\nmany scl values in an interval below 3/4, where the computed spectrum is finite.\nThe minimum of scl - 3/4 over the sweep behaves like 1/(8L - 52) in the length L\nswept: 1/44, 1/76, 1/92, 1/108 at lengths 14, 16, 18, 20.\n\nThe numbers here come from a computation carried out in an AI agent session in\nAugust 2026 using `scallop`, in its rigorous exact-rational mode, and spot-checked\nagainst two independent algorithms. **No person has checked it.** Treat it as\ncomputational evidence and not as established fact.\n\nWhat is missing is a single one-parameter family realising 3/4 + 1/(4m): by the\nmain theorem of *scl, sails and surgery* it cannot be a surgery family of fixed\nshape, and every fixed-shape family tested increases rather than decreases. Since\nthe limit of a surgery family is the scl of the associated chain, the natural route\nis a sequence of chains with scl decreasing to 3/4. Among all two-word chains of\ntotal length at most 10 the smallest scl above 3/4 is 5/6, so that search has to go\nfurther. Until such a family is exhibited, the descending sequence is a list of\nwitnesses rather than a construction.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "answers",
+      "target": "9c34f1eb87d8-is-there-an-infinite-strictly-descending-sequen"
+    },
+    {
+      "rel": "supports",
+      "target": "464034cec756-the-first-accumulation-point-of-scl-in-free-gro"
+    },
+    {
+      "rel": "cites",
+      "target": "25393096b372-computed-bottom-of-the-scl-spectrum-in-f-2-exha"
+    }
+  ],
+  "status": "open",
+  "asserted_confidence": "plausible",
+  "id": "a98154103e13-3-4-is-also-approached-from-above-giving-an-inf",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQFPt+UMFyP1xvIZjNlSHH2PkVRi8iH+kcUlS86awuGbWWoE7ST\naH7MNfYhpBw24OJh/ftfsIsTUWPttCu9HneQs=\n-----END SSH SIGNATURE-----\n"
+}

@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "type": "question",
+  "title": "Is scl rational for chains in closed hyperbolic surface groups?",
+  "body": "## The question\n\nLet S be a closed hyperbolic surface and let C be a chain in pi_1(S): a formal sum of\ncyclically reduced conjugacy classes whose total homology class is trivial. Is scl(C)\nalways rational?\n\nI conjecture that this is true, i.e. that scl(C) is always rational. This record is the \ntop-level goal of the project; most other records bear on it.\n\nThe question is deliberately posed for chains and not merely for single group elements.\nThat is not a technical convenience forced by the definition; it is the right generality\nto work in. Chains are what the cut-and-glue arguments actually produce and consume, and\na statement restricted to elements would have to be reformulated for chains at the first\nstep of any serious attempt.\n\nTwo things deliberately left open in the statement. First, whether it matters that S is\norientable is not known, and is recorded separately. Second, a declared variant of this\nquestion asks the same thing for closed hyperbolic two-dimensional orbifolds, for\ninstance a torus with a single cone point of order 2; that variant is recorded\nseparately and is not a special case of the statement above.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [],
+  "status": "open",
+  "id": "57e37bd7d928-is-scl-rational-for-chains-in-closed-hyperbolic",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQN7W8B1x5fHTunRmFt/fR6QqibWw4mCU3aFCZyc63QMVseKFV2\nDyMgLgezGSDGs8BfYtMce0WQZvz70f5FzFHwU=\n-----END SSH SIGNATURE-----\n"
+}

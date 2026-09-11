@@ -1,0 +1,25 @@
+# The authoritative run: after a change has been accepted, re-check everything
+# using the accepted branch's own validator. Nothing a proposal did can affect
+# this run. If it ever fails, the accepted history contains something that
+# should not have got in, and that is an incident.
+name: validate-main
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 6 * * *'   # daily, to catch anything that changed underneath us
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 polymath validate
+      - run: python3 tests/test_polymath.py

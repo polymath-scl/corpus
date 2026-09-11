@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "type": "reference",
+  "title": "Calegari, scl, the graph-of-free-groups theorem in the free and surface groups chapter",
+  "body": "## The reference\n\nDanny Calegari, *scl*, MSJ Memoirs volume 20, Mathematical Society of Japan, 2009.\n\nChapter: **Free and surface groups**. Section: **The Rationality Theorem**. Subsection:\n**Injective, extremal, isometric maps**. The statement is the theorem labelled\n`injective_surface_graph` in the source; its printed number is not recorded here, because\nthe build files in the source directory are empty and the number could not be recovered\nfrom the manuscript. Somebody with a printed copy should supersede this record with it.\n\nPart (3) of that theorem reads:\n\n> Let G be a finite graph of free groups, amalgamated along cyclic subgroups. Let\n> g_1, ..., g_n in G be conjugate into (free) vertex subgroups of G. Then scl is piecewise\n> rational linear on the intersection of <g_1, ..., g_n> with B_1^H(G), and every rational\n> chain in this subspace rationally bounds an extremal surface.\n\nOnly a sketch of the proof is given there. The details are in:\n\nDanny Calegari, *Surface subgroups from homology*, Geometry & Topology **12** (2008),\n1995-2007.\n\n## Why it is relevant\n\nThis is what gives rationality for a chain in a closed hyperbolic surface group disjoint\nfrom a simple essential curve. Cutting the surface along the curve presents its\nfundamental group as a graph of free groups amalgamated over the cyclic subgroup carried\nby the curve -- an amalgam if the curve separates, an HNN extension if not. A chain\ndisjoint from the curve is carried by the complementary pieces, so its terms are conjugate\ninto the free vertex subgroups, and part (3) applies directly.\n\nNote that part (3) gives more than rationality: it also produces an extremal surface. So\nin this special case the question of whether extremal surfaces exist has a positive\nanswer, which is worth knowing when considering the general question.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [],
+  "id": "df1ab55d6743-calegari-scl-the-graph-of-free-groups-theorem-i",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQBmdojWe2vObn8K1+4OGrPJGhq0UckEDz2awdEneVZBi11ub9S\nfuum4xbpV5LZHoMJBy1Zx29YEKiddgSI+SZwA=\n-----END SSH SIGNATURE-----\n"
+}

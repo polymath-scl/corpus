@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "type": "question",
+  "title": "Which rationals occur as scl of a chain in a free group?",
+  "body": "## The question\n\nLet F be a free group. Which rational numbers occur as scl(C) for a chain C in F?\n\nscl takes only rational values on free groups, and the naive form of the question\nis whether every rational at least 1 is attained. Computation suggests a sharper\nand rather different answer, recorded separately: that the threshold is 3/4 rather\nthan 1, and that above 3/4 essentially everything is attained while below it the\nspectrum is sparse.\n\nThis is the top-level goal of the side project on the scl spectrum, alongside the\nconstruction of explicit extremal quasimorphisms certifying particular values.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "cites",
+      "target": "ff7e48f54007-conventions-what-a-chain-is-and-how-to-write-on"
+    }
+  ],
+  "status": "open",
+  "id": "b3b2d72e6dba-which-rationals-occur-as-scl-of-a-chain-in-a-fr",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQKKYYkGD/ovwpUIkGRfv1MPpRpTHVuHgRMoHvJVA4L+A2wuIGM\nVc4J3+7y+ruZDl3VEgKKSQTaXXEqTGnWV/XwU=\n-----END SSH SIGNATURE-----\n"
+}

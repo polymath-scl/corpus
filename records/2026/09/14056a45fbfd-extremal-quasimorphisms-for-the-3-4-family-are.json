@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "type": "obstruction",
+  "title": "Extremal quasimorphisms for the 3/4 family are out of reach of the obvious computation",
+  "body": "## What goes wrong\n\nThe values of scl(w_n) are already rigorous, being exact rational linear\nprogramming. What is missing is the dual object: an explicit extremal\nquasimorphism certifying the lower bound, which is the point of the side project.\n\n`scallop -train -sup` is the mode that produces an actual counting quasimorphism\nwith its defect. For w_3 it returns 1/2 at word length 3 and at 4, so length at\nleast 5 is needed, and length 5 does not finish under GLPK in reasonable time. The\nrequired length appears to grow like n + 1, because the quasimorphism has to see\nthe whole block a^n. So the cost grows exponentially in exactly the parameter that\nindexes the family, and the naive route gives certificates for no member of it.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "cites",
+      "target": "464034cec756-the-first-accumulation-point-of-scl-in-free-gro"
+    }
+  ],
+  "what_was_tried": "`scallop -train L` (a rigorous lower bound from a genuinely different algorithm,\nusing train tracks) was run and is already sharp for w_3 at L = 4, confirming the\nvalue independently. But that is an scl computation, not a quasimorphism, so it\ndoes not produce a certificate.\n\n`scallop -train -sup L`, which does produce the quasimorphism, was then run: L = 3\nand L = 4 give only 1/2 for w_3, and L = 5 does not terminate under GLPK. The\npattern of where `-train L` becomes sharp -- L = 4 for n = 3, L = 5 for n = 4,\nL >= 6 for n = 5 -- suggests L = n + 1 is needed throughout.\n\nTwo routes out, neither taken. `trollop -L filename` dumps the `-sup` linear\nprogram as a sparse matrix and vectors; solving that in exact rational arithmetic,\nor merely verifying a guessed dual point, would give the coefficients of the\nextremal counting quasimorphism directly, and given the L = n + 1 pattern those\ncoefficients should be supported on words of the form a^k b and should be a visible\nfunction of n. Alternatively a better LP solver than GLPK might simply finish.\n\nThe more promising route is not a certificate at all: since scl(w_n) is linear\nfractional in the twist parameter, the surgery machinery should prove both bounds\nfor the whole family at once.\n\nThe numbers here come from a computation carried out in an AI agent session in\nAugust 2026 using `scallop`, in its rigorous exact-rational mode, and spot-checked\nagainst two independent algorithms. **No person has checked it.** Treat it as\ncomputational evidence and not as established fact.",
+  "id": "14056a45fbfd-extremal-quasimorphisms-for-the-3-4-family-are",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQNkw/SWm9xPhmVZyG3torEsyZhm310uvYNvQV0IeqFoPgShxtF\n8mm9f91L13caCEwk5xICEp51XMoxz4JZME4Q4=\n-----END SSH SIGNATURE-----\n"
+}

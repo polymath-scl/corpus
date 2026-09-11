@@ -1,0 +1,12 @@
+# Everything here can change what gets checked, who is a member, or what runs on
+# a member's machine. Two administrators must approve any change.
+#
+# NOTE the form of the name: a team is written @organisation/team. Written as a
+# bare @polymath-admins it matches nobody, silently, and the file would look
+# correct while enforcing nothing. The team must exist in the polymath-scl
+# organisation before these lines do anything.
+/.github/      @polymath-scl/polymath-admins
+/polymath      @polymath-scl/polymath-admins
+/tests/        @polymath-scl/polymath-admins
+/people/       @polymath-scl/polymath-admins
+/LICENSES/     @polymath-scl/polymath-admins

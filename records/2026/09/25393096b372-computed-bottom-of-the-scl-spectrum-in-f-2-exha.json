@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "type": "artifact",
+  "title": "Computed bottom of the scl spectrum in F_2, exhaustive to length 20",
+  "body": "## What this file is\n\nEvery value of scl in [1/2, 3/4] attained by a cyclically reduced homologically\ntrivial word of length at most 20 in F_2 -- twenty-five values, with a shortest\nwitness word for each -- together with the three structured families found below\n3/4, the family approaching 3/4 from above, and the sizes of the exhaustive search\nat each length.\n\nThe search covered 185,502 symmetry classes, exhaustively for length at most 20,\nwith structured families scanned out to length 42.\n\nThe numbers here come from a computation carried out in an AI agent session in\nAugust 2026 using `scallop`, in its rigorous exact-rational mode, and spot-checked\nagainst two independent algorithms. **No person has checked it.** Treat it as\ncomputational evidence and not as established fact.\n\n## How to check it\n\nValues were produced by `scallop` (Calegari-Walker) in `-cyclic` mode, which is an\nexact rational linear program. Any individual entry can be rechecked in seconds by\nrunning scallop on the witness word given in the table, and cross-checked with\n`-mEXLP` or the independent `-local` algorithm.\n\nThe full original report and the code that produced these numbers are not published\nhere; they remain with the author of this record. Say so if you want them added to\nthe corpus as a further artifact.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [],
+  "file": {
+    "path": "scl-spectrum-data.md",
+    "sha256": "294f9198e43cd4f68b406bf550ec6f07da13a61d2f5a1db7b72a2f08d7751140"
+  },
+  "id": "25393096b372-computed-bottom-of-the-scl-spectrum-in-f-2-exha",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQOQUt/eadfbsHS0cQkSIT3N988Y2krlAJfSjxL3KwBw0OckBEB\n77HcZ3vR6iU58I0O6/E21TyACKdipnEyDSLQQ=\n-----END SSH SIGNATURE-----\n"
+}

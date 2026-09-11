@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "type": "question",
+  "title": "Does orientability matter for rationality of scl in surface groups?",
+  "body": "## The question\n\nLet S be a closed hyperbolic surface and let C be a chain in pi_1(S): a formal sum of\ncyclically reduced conjugacy classes whose total homology class is trivial. It is\nconjectured that scl(C) is always rational.\n\nDoes the answer depend on whether S is orientable?\n\nTwo readings, and both are open. Does rationality hold for closed non-orientable\nhyperbolic surfaces as well as orientable ones? And would a proof of the orientable case\ntransfer, or is there some argument that uses orientability essentially?\n\nIt is not clear that it should matter. It is recorded separately because a proof of the\norientable case that leaned on orientability would leave the general statement open, and\nit would be easy not to notice that at the time.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "cites",
+      "target": "57e37bd7d928-is-scl-rational-for-chains-in-closed-hyperbolic"
+    }
+  ],
+  "status": "open",
+  "id": "603e7254d788-does-orientability-matter-for-rationality-of-sc",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQH+lFWGsNwXoqX91h5+ECgd6Sl1wJ4KzEdbMJzZMtcZqoCMfXz\nRiyDET52c5IkFBIr5Jljh6dGPruLLvD8fAXQc=\n-----END SSH SIGNATURE-----\n"
+}

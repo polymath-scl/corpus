@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "type": "note",
+  "title": "Conventions: what a chain is, and how to write one",
+  "body": "## Note\n\n### Notation\n\nInverses are written as upper case letters: `A` means the inverse of `a`. Do not write\n`a^{-1}`, `a\\inv`, or anything else. Formal chains are written as sums, with `+`.\n\nSo `a + bABa + AAbaB` is a chain.\n\nThis is worth being strict about for a reason that is particular to a shared searchable\nrecord rather than to a paper: search here is literal text matching. If half the project\nwrites `A` and half writes `a^{-1}`, the two halves stop finding each other's records,\nand the failure is silent -- a search returns \"nothing matched\", which reads as \"nobody\nhas tried this\".\n\n### What a chain is\n\nscl is not defined on an arbitrary group element. It is defined on the commutator\nsubgroup, and more generally on chains: formal sums of cyclically reduced conjugacy\nclasses whose total homology class is trivial.\n\nIn the free group F_2 = <a,b> this means a word must have equal numbers of a and A, and\nequal numbers of b and B, before scl(w) means anything at all. For a word with nonzero\nexponent sum, scl is undefined, or infinity if you prefer.\n\nNote what the example above shows. The individual terms need not have trivial homology\nclass: `a` has exponent sum +1 in `a`, and `AAbaB` has exponent sum -1 in `a`. It is only\nthe total that vanishes. A chain is therefore not merely a formal sum of elements that\nare each already in the commutator subgroup, and treating it as one is a mistake worth\nnaming.\n\nChains are also the right generality to work in, and not merely the largest domain on\nwhich the definition makes sense. The arguments that compute scl -- cutting along a curve,\ndecomposing into arcs, gluing surfaces with corners -- naturally take chains as input and\nproduce chains as output, so a statement about single elements would have to be widened\nto chains at the first step anyway. Pose questions about chains from the start.\n\nRecorded because the commutator-subgroup point is the first thing a newcomer gets wrong,\nand because a claim about the scl of an element outside the commutator subgroup is not\nfalse but meaningless, which is harder to notice.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "cites",
+      "target": "57e37bd7d928-is-scl-rational-for-chains-in-closed-hyperbolic"
+    }
+  ],
+  "id": "ff7e48f54007-conventions-what-a-chain-is-and-how-to-write-on",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQHQPdB7NkHOTYa3T9CqNUINhCWs370hmegPP42/gMoE8LrlgGI\nPgNaVIaiVCC5Cgo66LPi+v3bw5KV8BDbuukAw=\n-----END SSH SIGNATURE-----\n"
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "type": "reference",
+  "title": "Calegari and Walker, Surface subgroups from linear programming",
+  "body": "## The reference\n\nDanny Calegari and Alden Walker, *Surface subgroups from linear programming*,\nDuke Mathematical Journal **164** (2015), no. 5, 933-972.\narXiv:1212.2618. doi:10.1215/00127094-2877511\n\nFrom the abstract: certain classes of graphs of free groups contain surface\nsubgroups, including groups with positive b_2 obtained by doubling free groups\nalong collections of subgroups, and groups obtained by random ascending HNN\nextensions of free groups. The unit ball in the Gromov norm in dimension 2 of a\ndouble of a free group along a collection of subgroups is a finite-sided rational\npolyhedron, and every rational class is virtually represented by an extremal\nsurface subgroup. The results are obtained by a mixture of combinatorial,\ngeometric and linear programming techniques.\n\n## Why it is relevant\n\nThis is the source of the train-track scl technology. Several statements recorded\nin this project are theorems modulo that machinery: true, and provable by a\ncompetent person who knows this paper, but with the derivation not written out\nanywhere. Such records cite this paper and are marked as having no proof written\nout, which is an accurate description of their state and an open invitation.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [],
+  "id": "0570c4ce4164-calegari-and-walker-surface-subgroups-from-line",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQIIgqgOhq9jkoxtZQisFukV/dIIK2tFrvsPIFG0L9gYVJm+fuR\nE0v6HWYV9fC801oHntBXZX3cCrIK4ZXF+ItAc=\n-----END SSH SIGNATURE-----\n"
+}

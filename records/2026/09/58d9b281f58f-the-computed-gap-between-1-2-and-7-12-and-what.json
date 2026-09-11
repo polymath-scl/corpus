@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "type": "note",
+  "title": "The computed gap between 1/2 and 7/12, and what it is not",
+  "body": "## Note\n\nAn exhaustive computation over all cyclically reduced homologically trivial words\nof length at most 20 in F_2 -- 185,502 symmetry classes -- found no value of scl\nanywhere in the open interval (1/2, 7/12). The value 7/12 first occurs at length\n12, realised by the word `aaabaBAAbAAB`, and by eight classes at length 20 alone.\n\nThis is consistent with the gap suggested in Heuer's survey *What is stable\ncommutator length?*, and is the strongest direct numerical evidence for it known\nto this project.\n\nTwo statements are easy to conflate here, and they are about different things.\n\nA **gap** between 1/2 and 7/12 says that both endpoints are attained and nothing\nlies between them. An **accumulation point** at 3/4 says that values pile up there,\nand that below 3/4 the spectrum is discrete. Neither implies the other.\n\nThe word `aaabaBAAbAAB` witnesses both, and that is not a coincidence. It is the\nn = 3 member of the family with scl(w_n) = 3/4 - 1/(2n), and 7/12 = 3/4 - 1/6 is\nsimply the first member of that family exceeding 1/2. The gap (1/2, 7/12) is\nexactly the statement that nothing gets between the n = 2 and n = 3 members.\n\nRelated work above this in the literature: Heuer, *Gaps in scl for amalgamated free\nproducts and RAAGs* (arXiv:1802.01107, GAFA 2019), a sharp gap of 1/2; Chen-Heuer,\n*Spectral gap of scl in graphs of groups and 3-manifolds* (arXiv:1910.14146), a\nuniversal 1/12; Heuer, *The full spectrum of scl on recursively presented groups*\n(arXiv:1909.01309).\n\nThe numbers here come from a computation carried out in an AI agent session in\nAugust 2026 using `scallop`, in its rigorous exact-rational mode, and spot-checked\nagainst two independent algorithms. **No person has checked it.** Treat it as\ncomputational evidence and not as established fact.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "cites",
+      "target": "8dbd3a8f0977-what-is-the-first-accumulation-point-of-the-scl"
+    }
+  ],
+  "id": "58d9b281f58f-the-computed-gap-between-1-2-and-7-12-and-what",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQF5RcP08Br04jGUekGcnvNbPKC4yBe2DNZnwgtgQEmcmW7VaFr\nfIdfujtnC6jM9lmgQj+T3GYCKQzyCjRVrjRQU=\n-----END SSH SIGNATURE-----\n"
+}

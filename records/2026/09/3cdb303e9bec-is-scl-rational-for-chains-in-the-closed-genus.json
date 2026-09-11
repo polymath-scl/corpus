@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "type": "question",
+  "title": "Is scl rational for chains in the closed genus 2 surface group?",
+  "body": "## The question\n\nLet S be the closed orientable surface of genus 2, and let C be a chain in pi_1(S): a\nformal sum of cyclically reduced conjugacy classes whose total homology class is trivial.\n\nIs scl(C) always rational?\n\nThis is the simplest closed hyperbolic surface, and so the natural first case in which to\nsettle the general conjecture.\n\nIt is an important test case rather than a subgoal, and the distinction is worth keeping.\nNo theorem is known that would make a solution here imply the general statement for all\nclosed hyperbolic surfaces; the expectation is only that a solution would bear on it,\nprobably by exposing what the general argument would have to control.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "specializes",
+      "target": "57e37bd7d928-is-scl-rational-for-chains-in-closed-hyperbolic"
+    }
+  ],
+  "status": "open",
+  "id": "3cdb303e9bec-is-scl-rational-for-chains-in-the-closed-genus",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQHNdm6cIjT16eRBcfve510gYLdyN2Hr9krIKqQ6eacM8vqEwiD\n1TL7C9twyY0dRKchiZAAltVWnP1Pv0WZoIjQY=\n-----END SSH SIGNATURE-----\n"
+}

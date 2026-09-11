@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "type": "theorem",
+  "title": "scl is rational for a chain missing a simple essential curve",
+  "body": "## The statement\n\nLet S be a closed hyperbolic surface and C a chain in pi_1(S). If there is a simple\nessential curve gamma on S disjoint from the support of C, then scl(C) is rational.\n\n## The proof, or where to find it\n\nCut S along gamma. Since C is disjoint from gamma, the computation of scl(C) reduces to a\nrelative computation in the cut-open surface, whose fundamental group is free. Rationality\nof scl in that relative setting is already proved.\n\nThe reduction is an instance of a theorem in the chapter on free and surface groups of\nCalegari, *scl* (MSJ Memoirs 20, 2009), in the subsection \"Injective, extremal, isometric\nmaps\": if G is a finite graph of free groups amalgamated along cyclic subgroups, and\ng_1, ..., g_n are conjugate into the free vertex subgroups, then scl is piecewise rational\nlinear on the span of the g_i inside B_1^H(G), and every rational chain there rationally\nbounds an extremal surface.\n\nCutting S along gamma presents pi_1(S) as exactly such a graph of free groups, amalgamated\nover the cyclic subgroup carried by gamma: an amalgam when gamma separates, an HNN\nextension when it does not. A chain disjoint from gamma is carried by the complementary\npieces, so its terms are conjugate into the vertex groups and the theorem applies.\n\nThe cited record gives the full reference.\n\nThis is the main thing known in the direction of the general conjecture, that scl is\nrational for every chain in the fundamental group of a closed hyperbolic surface. It is\nalso what makes the general cut-and-glue approach look plausible: the difficulty in\ngeneral is not the cutting, but that an arbitrary chain cannot be made disjoint from a\nsimple essential curve.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "specializes",
+      "target": "57e37bd7d928-is-scl-rational-for-chains-in-closed-hyperbolic"
+    },
+    {
+      "rel": "proved_in",
+      "target": "df1ab55d6743-calegari-scl-the-graph-of-free-groups-theorem-i"
+    }
+  ],
+  "asserted_confidence": "confident",
+  "status": "open",
+  "id": "914f91e360d2-scl-is-rational-for-a-chain-missing-a-simple-es",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQIMCmOnhWZ7o7tYfNlaSnmK/ywv05pB5Opdd6N3DrB6OksfBZ9\nzzee+EQQPQoWq0SXhEreT9cOsxZSJsouLhUws=\n-----END SSH SIGNATURE-----\n"
+}

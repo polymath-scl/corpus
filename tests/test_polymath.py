@@ -62,6 +62,9 @@ class Fixture:
                 f'key_confirmed_out_of_band = "in person, 2026-09-10"\n'
                 f'keys = ["{pub}"]\n', encoding="utf-8")
         subprocess.run(["git", "-C", str(self.root), "init", "-q"], check=True)
+        for k, v in (("user.name", "Test Member"),
+                     ("user.email", "test@example.invalid")):
+            subprocess.run(["git", "-C", str(self.root), "config", k, v], check=True)
 
     def corpus(self):
         c = pm.Corpus(self.root)
@@ -770,6 +773,44 @@ def t_nothing_leaks_a_home_directory_or_an_address():
     (f.root / "README.md").write_text("Run `polymath init --key ~/.ssh/id_ed25519`.\n")
     check("project documentation is not scanned for this",
           "C07" not in codes(f.validate()), [str(p) for p in f.validate()])
+    f.clean()
+
+
+def t_publishing_without_a_git_identity_fails_cleanly():
+    """Found by CI on the first push: a machine with no git identity configured
+    got 'Author identity unknown' from deep inside git, AFTER the record had been
+    written and a branch created. Every new member hits this."""
+    f = fresh()
+    for k in ("user.name", "user.email"):
+        subprocess.run(["git", "-C", str(f.root), "config", "--unset", k],
+                       capture_output=True)
+    env = {**os.environ, "GIT_CONFIG_GLOBAL": str(f.tmp / "nogitconfig"),
+           "GIT_CONFIG_SYSTEM": os.devnull, "GIT_AUTHOR_NAME": "", "GIT_AUTHOR_EMAIL": "",
+           "GIT_COMMITTER_NAME": "", "GIT_COMMITTER_EMAIL": "", "EMAIL": ""}
+    draft = f.tmp / "d.md"
+    draft.write_text("---\ntype: note\ntitle: No identity here\nauthor: bob\n"
+                     "provenance: human\n---\n\nSome prose.\n", encoding="utf-8")
+    r = subprocess.run([sys.executable, str(SCRIPT), "--root", str(f.root),
+                        "publish", str(draft), "--key", str(f.keys["bob"]), "-y"],
+                       capture_output=True, text=True, env=env)
+    out = r.stdout + r.stderr
+    check("publishing stops rather than failing obscurely", r.returncode == 1, out[-300:])
+    check("it explains the problem in plain words",
+          "does not yet know who you are" in out, out[-300:])
+    check("it gives the exact commands that fix it",
+          "git config --global user.name" in out and "user.email" in out)
+    branches = subprocess.run(["git", "-C", str(f.root), "branch", "--list", "record/*"],
+                              capture_output=True, text=True).stdout.strip()
+    check("it does not leave you stranded on a half-made branch",
+          branches == "", f"created {branches!r}")
+    check("the record itself was still written and is valid",
+          f.validate() == [], [str(p) for p in f.validate()])
+
+    d = subprocess.run([sys.executable, str(SCRIPT), "--root", str(f.root), "doctor"],
+                       capture_output=True, text=True, env=env)
+    check("`doctor` reports it too, so it is caught before publishing",
+          "git knows who you are" in d.stdout and "[--] git knows who you are" in d.stdout,
+          d.stdout)
     f.clean()
 
 

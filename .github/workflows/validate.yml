@@ -51,8 +51,22 @@ jobs:
             echo "::warning::this run should be trusted."
           fi
 
+      # The authoritative check: the ALREADY-ACCEPTED validator, run against the
+      # proposal's content. A proposal cannot change what this does without
+      # editing .github/, which is administrator-owned.
       - name: Validate the proposal using the accepted validator
         run: python3 trusted/polymath --root proposal validate
 
-      - name: Run the validator's own tests
-        run: python3 trusted/tests/test_polymath.py
+      # The proposal's own tests, so that a change to the client is actually
+      # tested. Note this runs code the proposal supplies. That is acceptable
+      # here and only here: the runner is ephemeral, has no credentials, and is
+      # destroyed afterwards. It is NOT what gates the integrity of the corpus --
+      # the step above is, and that one the proposal cannot influence.
+      - name: Run the proposal's own tests
+        run: python3 proposal/tests/test_polymath.py
+
+      # Deliberately NOT run here: the accepted branch's own test suite. That
+      # tests the accepted branch, not the proposal, and belongs in
+      # validate-main.yml, which already does it. Running it here once deadlocked
+      # the repository: a failing test on main blocked every pull request,
+      # including the one fixing that test.

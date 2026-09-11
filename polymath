@@ -1446,6 +1446,21 @@ def git_carry_through(corpus: Corpus, rec: dict, paths: list, open_browser=True)
         print("\nThis folder is not tracked by git, so the record exists only here.")
         return 0
 
+    # Check this BEFORE creating a branch and staging anything, so a member with
+    # an unconfigured git is not left stranded half way through.
+    if git("var", "GIT_COMMITTER_IDENT", check=False).returncode != 0:
+        print("\nYour record has been written, but git does not yet know who you are,",
+              file=sys.stderr)
+        print("so it cannot record the change in the history. git puts your name on every",
+              file=sys.stderr)
+        print("change; it is asking you to say what that name is. Run these two, once:",
+              file=sys.stderr)
+        print('\n   git config --global user.name "Your Name"', file=sys.stderr)
+        print('   git config --global user.email "you@your-university.edu"\n',
+              file=sys.stderr)
+        print("then run the same publish command again.", file=sys.stderr)
+        return 1
+
     branch = "record/" + rec["id"].split("-", 1)[0]
     if git("rev-parse", "--verify", branch, check=False).returncode == 0:
         branch += "-" + _dt.datetime.now().strftime("%H%M%S")
@@ -1907,6 +1922,13 @@ def cmd_doctor(args):
                       "administrator to update people/" + cfg["handle"] + ".toml.")
             except SystemExit:
                 check("your key signs", False)
+    ident = subprocess.run(["git", "-C", str(corpus.root), "var", "GIT_COMMITTER_IDENT"],
+                           capture_output=True, text=True)
+    check("git knows who you are", ident.returncode == 0,
+          "git puts your name on every change you make, and does not know it yet.\n"
+          "Publishing will stop and tell you the same thing. To fix, run these once:\n"
+          '    git config --global user.name "Your Name"\n'
+          '    git config --global user.email "you@your-university.edu"')
     if (corpus.root / ".git").exists():
         cs = subprocess.run(["git", "-C", str(corpus.root), "config", "--get", "core.symlinks"],
                             capture_output=True, text=True).stdout.strip()

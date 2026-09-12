@@ -28,6 +28,11 @@ older and much fiddlier PGP system.
 
 ## Start here
 
+**New to the project?** Read [onboarding/README.md](onboarding/README.md) for what this is
+and how it operates, and [onboarding/setup.md](onboarding/setup.md) for the practical steps.
+Then:
+
+
 ```bash
 python3 polymath tutorial
 ```

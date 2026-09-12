@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "type": "obstruction",
+  "title": "Re-running a failed check cannot pick up a fix to the branch it was run against",
+  "body": "## What goes wrong\n\nWhen a proposed change fails its automatic checks because of a defect in the *accepted*\nbranch rather than in the proposal, the obvious response is to fix the accepted branch and\nthen re-run the check. This can never work, and the reason is not discoverable from\nanything the interface shows you.\n\nRe-running replays the original run. It re-uses the workflow definition, the merge\ncommit and the state of the accepted branch as they were when the run was first created.\nA fix merged afterwards is invisible to it, however many times it is re-run. The only\nthing that produces a run which sees the corrected branch is a *new commit on the\nproposal* -- pressing \"Update branch\", or merging the accepted branch in by hand.\n\nWhat makes this worse than a harmless no-op is that the re-run produces a fresh,\ncurrent-looking failure with a plausible and entirely obsolete error message. The reader\nconcludes the problem is still live and begins investigating something that was fixed\nhours earlier. Two people did exactly that here, independently, and one of them had\nalready diagnosed and fixed the underlying bug himself.\n\nThe tell, when it happened, was the *name* of the failing step. The corrected workflow had\nrenamed that step; the failing run still showed the old name. Nothing else in the output\ndistinguished the replay from a current run.\n\nHow to tell which you are looking at: the check summary on the proposal's own page always\nreflects its current head commit, whereas an individual run opened from the list of all\nruns may belong to any earlier commit. The proposal's own \"mergeable\" state is the summary\nto trust. Opening a specific historical run and re-running it is the trap.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "depends_on",
+      "target": "3931fd8141f1-how-this-project-runs-and-where-findings-about"
+    }
+  ],
+  "what_was_tried": "A proposal's checks failed because the accepted branch contained a defect in its test\nsuite -- a test that silently depended on a configured git identity, which the machine\nrunning the checks does not have.\n\nThe advice given at the time, by me, was: merge the fixing proposal, then re-run the\nfailed check. This was stated confidently and was wrong.\n\nFour re-runs followed, all failing identically. The fix was verifiably on the accepted\nbranch: its checks were passing there. The discrepancy was only resolved by comparing the\nname of the failing step against the names in the corrected workflow file, which showed\nthe run was still executing the old definition.\n\nPressing \"Update branch\", which creates a merge commit on the proposal, produced a new run\nthat passed on the first attempt.\n\nAfterwards a second person, reviewing the proposal, opened the old failed run from the list\nof all runs and re-ran it once more, obtaining the same failure and the same obsolete\nmessage, and reasonably concluded that the problem was unresolved.",
+  "id": "3fdd910ab5d2-re-running-a-failed-check-cannot-pick-up-a-fix",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQHDvJWR277Nt3MrR/Sl52TR6iTuzd5gR8mnYzSM4s5d7J7LMqq\n7MA7G9r5YsJfj9NRzTwgvKC4FAc7+WGEZKeA0=\n-----END SSH SIGNATURE-----\n"
+}

@@ -10,3 +10,6 @@
 /tests/        @polymath-scl/polymath-admins
 /people/       @polymath-scl/polymath-admins
 /LICENSES/     @polymath-scl/polymath-admins
+# Onboarding tells new members how to protect their keys and their accounts. Wrong
+# advice here is a security problem, not a documentation problem.
+/onboarding/   @polymath-scl/polymath-admins

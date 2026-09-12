@@ -36,7 +36,8 @@ MAX_JSON_DEPTH = 32
 MAX_ARTIFACT_BYTES = 10 * 1024 * 1024
 TOP_LEVEL = {"people", "records", "artifacts", "transcripts", "LICENSES",
              "tests", ".github", "polymath", "README.md", ".gitignore",
-             ".polymath.json", ".polymath-state.json", ".polymath-browse.html"}
+             ".polymath.json", ".polymath-state.json", ".polymath-browse.html",
+             "onboarding"}
 
 RECORD_TYPES = {
     "question", "conjecture", "theorem", "argument", "obstruction", "counterexample",

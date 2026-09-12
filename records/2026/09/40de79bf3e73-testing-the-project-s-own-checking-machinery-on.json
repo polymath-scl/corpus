@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "type": "obstruction",
+  "title": "Testing the project's own checking machinery only on the author's machine hides defects",
+  "body": "## What goes wrong\n\nThe checks that enforce this project's rules were developed and run on one person's\nlaptop, where they passed. Within about fifty minutes of first running anywhere else,\nthey exposed two defects, neither of which was visible locally and one of which would\nhave blocked the project entirely.\n\nThe first: `polymath publish` died with a raw `Author identity unknown` error from inside\ngit, after having written the record, created a branch and staged the files. Every new\nmember would have hit this at their first publication, because git on macOS guesses an\nidentity from the account name and hostname while other machines refuse to guess. The\nauthor's machine was configured, by accident of history, in the one way that conceals the\nproblem.\n\nThe second: the pull-request workflow ran the *accepted* branch's test suite rather than\nthe proposal's. A failing test on the accepted branch therefore blocked every pull\nrequest, including the one that fixed that test. This could not appear until a pull\nrequest existed, which was not until the tooling was already in use.\n\nThe sharpest part is not either defect but what happened when the first one was chased.\nTwo deliberate attempts were made to reproduce it locally by simulating the foreign\nenvironment: the whole suite was run on a purpose-built case-sensitive filesystem, to\ncatch anything the author's case-insensitive disk was hiding, and again with the git\nconfiguration stripped away. Both passed cleanly, and both hypotheses were wrong.\nSimulating the other machine did not work. Only the other machine worked.\n\nThis bears directly on the design of the project rather than being incidental to it. The\narchitecture rests on the automatic checks being the single point of enforcement, on the\ngrounds that running the client is optional and anything it does can be bypassed. If the\nchecks themselves are only ever exercised where they were written, that single point of\nenforcement is the least tested component in the system.\n\nA secondary lesson: both defects were in the infrastructure, not the mathematics, and a\ncorpus that records only mathematics teaches its members that this kind of finding is not\nworth writing down. It is, and this record exists partly to say so.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [
+    {
+      "rel": "depends_on",
+      "target": "3931fd8141f1-how-this-project-runs-and-where-findings-about"
+    }
+  ],
+  "what_was_tried": "The full test suite was run repeatedly on the author's machine throughout development,\nfinishing at 168 tests passing, and was treated as evidence that the tooling worked.\n\nWhen the automatic checks failed on their first run elsewhere, the failure was chased\nlocally rather than by reading the remote output, which was not accessible without\nadministrator rights. Two environment differences were hypothesised and tested directly:\na case-sensitive filesystem, created as a disk image for the purpose, since one test had\nnever executed on the author's case-insensitive disk; and a missing git identity,\nsimulated by clearing the home directory and both git configuration paths. Each\nreproduced cleanly, at 163 tests passing, and each hypothesis was therefore rejected.\n\nThe failure was identified only by obtaining the actual output from the run on the other\nmachine. The correct first move would have been to read that output rather than to\nreason about what might differ.",
+  "id": "40de79bf3e73-testing-the-project-s-own-checking-machinery-on",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQKwNgidqV8ztQ3u9vz0QrlNswivT2okFB5paBtJlr6NaM1zDph\nh5xIoJh+n6v4oW7b2Uw/rgpqsitE5J0iaBxAI=\n-----END SSH SIGNATURE-----\n"
+}

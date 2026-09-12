@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "type": "note",
+  "title": "How this project runs, and where findings about it belong",
+  "body": "## Note\n\nThis is the anchor for records about the project itself rather than about the\nmathematics. If you have learned something about how the collaboration works -- a way of\nrunning it that fails, a piece of the tooling that misleads, a convention that turns out\nnot to survive contact with people -- it belongs in a record linked to this one.\n\nThe corpus therefore has two parts that are not joined to each other: the mathematics,\nand this. That is deliberate. A finding about the machinery has no natural place in a\ngraph of questions about stable commutator length, and forcing a link to one would be\nfalse. What it needs instead is somewhere of its own to hang, so that it is findable by\nsomebody who is looking for it and does not simply sit unattached.\n\nWhy keep such records at all, rather than putting them in a wiki or an email thread. Two\nreasons, and the first is the weaker one: the machinery is part of what is being tried\nhere, and the experiment is not only mathematical. The second matters more. A corpus that\nrecords only theorems teaches its members, by example and without ever saying so, that\neverything else is not worth writing down -- including the dead ends in how the work is\norganised, which are exactly as expensive to rediscover as mathematical ones and rather\nmore embarrassing to repeat.\n\nWhat belongs here:\n\n- how the tooling fails, and what was tried before discovering it\n- conventions that were adopted and then had to change, and why\n- the record vocabulary itself, which has already changed more than once in response to\n  real content and will change again\n- decisions about how the project is hosted, governed and credited, where the reasoning\n  would otherwise be lost\n- anything learned about working with AI assistants on mathematics, which is a large part\n  of the point of the exercise and about which almost nothing is established\n\nWhat does not belong here: the mathematics, which has its own goals to hang from; and\ngrumbling, which is not a finding.\n\nOne caution. These records are subject to exactly the same rules as the rest of the\ncorpus. They are public and permanent, they carry your name, and they cannot be retracted.\nA finding about a person is not a finding about the project.",
+  "author": "danny",
+  "provenance": {
+    "kind": "agent-assisted",
+    "model": "claude-opus-5"
+  },
+  "links": [],
+  "id": "3931fd8141f1-how-this-project-runs-and-where-findings-about",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgQSYLGc315ML4ntK05Rl2GUKyW0\nSOwRoMG5W+vOgeefMAAAAPcG9seW1hdGgtcmVjb3JkAAAAAAAAAAZzaGE1MTIAAABTAAAA\nC3NzaC1lZDI1NTE5AAAAQKfnmLlLFRBMD16iI8Zb39Mfx+MhZxwBtIPGLZPpYoTdR8KeIp\nRnPg8lQI/ja9yxVXvdXNnL/Un9MhMHYp7nBA0=\n-----END SSH SIGNATURE-----\n"
+}

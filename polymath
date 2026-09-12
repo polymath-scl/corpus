@@ -650,10 +650,19 @@ def validate_people(corpus: Corpus, problems: list):
                 problems.append(Problem("P08", where, f"admitted_by {admitted!r} is not a member"))
             elif admitted != handle and corpus.people[admitted].get("role") != "admin":
                 problems.append(Problem("P09", where, f"{admitted!r} is not an administrator"))
-        if not person.get("key_confirmed_out_of_band"):
+        confirmed = str(person.get("key_confirmed_out_of_band") or "")
+        if not confirmed.strip():
             problems.append(Problem("P10", where,
                                     "the public key must be confirmed in person, by video, or "
                                     "against an institutional page, and that recorded here"))
+        elif re.search(r"\bTODO\b|\bTBD\b|\bFIXME\b|_{3,}|\?\?\?", confirmed, re.I):
+            # This is the one rule in the system that no program can verify. If a
+            # placeholder satisfies it, it is not even a speed bump.
+            problems.append(Problem("P11", where,
+                                    f"key_confirmed_out_of_band still reads like a placeholder "
+                                    f"({confirmed.strip()[:60]!r}). Confirm the key over a channel "
+                                    f"other than the one that delivered it, then write down what "
+                                    f"you actually did and when"))
 
 
 def run_validation(corpus: Corpus) -> list:
